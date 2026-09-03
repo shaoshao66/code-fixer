@@ -77,8 +77,8 @@ def test_is_from_github_url():
 
 def test_get_associated_commit_urls():
     assoc = _get_associated_commit_urls(
-        org="Code-Fixer",
-        repo="Code-Fixer",
+        org="SWE-agent",
+        repo="SWE-agent",
         issue_number="41",
         token=os.environ.get("GITHUB_TOKEN", ""),
     )
