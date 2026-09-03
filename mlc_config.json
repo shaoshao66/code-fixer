@@ -28,6 +28,9 @@
       "pattern": "https://jsoneditoronline.org/.*"
     },
     {
+      "pattern": "https://swe-bench.slack.com"
+    },
+    {
       "pattern": ".*\\.md/#codefixer\\..*"
     },
     {
