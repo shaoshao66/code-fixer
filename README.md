@@ -139,7 +139,6 @@ MIT. Check `LICENSE`.
 [![Pytest](https://github.com/shaoshao66/code-fixer/actions/workflows/pytest.yaml/badge.svg)](https://github.com/shaoshao66/code-fixer/actions/workflows/pytest.yaml)
 [![build-docs](https://github.com/shaoshao66/code-fixer/actions/workflows/build-docs.yaml/badge.svg)](https://github.com/shaoshao66/code-fixer/actions/workflows/build-docs.yaml)
 [![codecov](https://codecov.io/gh/shaoshao66/code-fixer/graph/badge.svg?token=18XAVDK365)](https://codecov.io/gh/shaoshao66/code-fixer)
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/shaoshao66/code-fixer/main.svg)](https://results.pre-commit.ci/latest/github/shaoshao66/code-fixer/main)
 [![Markdown links](https://github.com/shaoshao66/code-fixer/actions/workflows/check-links-periodic.yaml/badge.svg)](https://github.com/shaoshao66/code-fixer/actions/workflows/check-links-periodic.yaml)
 
 </div>
