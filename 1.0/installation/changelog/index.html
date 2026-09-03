@@ -3612,101 +3612,101 @@ Using this training data, our LM Code-Fixer-LM-32b achieves open-weights SotA on
 <p>Apart from that, v1.1.0 is mostly a fix release with minor improvements, in particular adding compatibility with SWE-bench multilingual/multimodal, and SWE-smith.</p>
 <h3 id="breaking-changes">Breaking changes</h3>
 <ul>
-<li>Changes to trajectory data format. The <code>messages</code> field is replaced by <code>query</code> by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1107">#1107</a></li>
-<li>Renamed many tool bundles that used "windowed" file viewer (<code>defaults</code> and more) by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1147">#1147</a></li>
-<li>Removed <code>review_on_submit</code> tool bundle (replaced by <code>review_on_submit_m</code>) by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1148">#1148</a></li>
-<li>Change in <code>windowed</code> tools (formerly <code>default</code>): Don't append \n to new file by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1114">#1114</a></li>
+<li>Changes to trajectory data format. The <code>messages</code> field is replaced by <code>query</code> by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1107">#1107</a></li>
+<li>Renamed many tool bundles that used "windowed" file viewer (<code>defaults</code> and more) by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1147">#1147</a></li>
+<li>Removed <code>review_on_submit</code> tool bundle (replaced by <code>review_on_submit_m</code>) by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1148">#1148</a></li>
+<li>Change in <code>windowed</code> tools (formerly <code>default</code>): Don't append \n to new file by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1114">#1114</a></li>
 </ul>
 <h3 id="added">Added</h3>
 <p>New dataset support:</p>
 <ul>
-<li>Feat: Support multilingual evaluation by <a href="https://github.com/kabirgh">@kabirgh</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1090">#1090</a></li>
-<li>Feat: SWE-smith &amp; multimodal base support by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1092">#1092</a></li>
+<li>Feat: Support multilingual evaluation by <a href="https://github.com/kabirgh">@kabirgh</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1090">#1090</a></li>
+<li>Feat: SWE-smith &amp; multimodal base support by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1092">#1092</a></li>
 </ul>
 <p>New utilities:</p>
 <ul>
-<li>Feat: Add quick-stats tool by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1125">#1125</a></li>
+<li>Feat: Add quick-stats tool by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1125">#1125</a></li>
 </ul>
 <h3 id="enhanced">Enhanced</h3>
 <ul>
-<li>Feat: Config/override max_output_tokens by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1036">#1036</a></li>
-<li>Enh: [#1042] fix(run_batch): handle JSON parsing errors in trajectory check by <a href="https://github.com/FRAOTIAC">@FRAOTIAC</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1043">#1043</a></li>
-<li>Enh: Allow to override tools dirs etc. by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1046">#1046</a></li>
-<li>Enh: Allow to override path to swe-bench dataset by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1093">#1093</a></li>
-<li>Enh: Allow to disable python-standalone for batch by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1115">#1115</a></li>
-<li>Enh: More information on skipped exit status by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1117">#1117</a></li>
+<li>Feat: Config/override max_output_tokens by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1036">#1036</a></li>
+<li>Enh: [#1042] fix(run_batch): handle JSON parsing errors in trajectory check by <a href="https://github.com/FRAOTIAC">@FRAOTIAC</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1043">#1043</a></li>
+<li>Enh: Allow to override tools dirs etc. by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1046">#1046</a></li>
+<li>Enh: Allow to override path to swe-bench dataset by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1093">#1093</a></li>
+<li>Enh: Allow to disable python-standalone for batch by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1115">#1115</a></li>
+<li>Enh: More information on skipped exit status by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1117">#1117</a></li>
 </ul>
 <h3 id="fixed">Fixed</h3>
 <ul>
-<li>Fix: Setting max_input_tokens to 0 by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/999">#999</a></li>
-<li>Fix: Explicitly set log file encoding by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1013">#1013</a></li>
-<li>Fix: Ensure pydantic-settings env prefix set by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1018">#1018</a></li>
-<li>Fix: run batch processing with modal by <a href="https://github.com/vsee">@vsee</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1023">#1023</a></li>
-<li>Fix: Catch exit forfeit by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1024">#1024</a></li>
-<li>Fix: Use 'latest' image tag for SWE-Bench images by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1029">#1029</a></li>
-<li>Fix: Show tenacity retry reasons by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1032">#1032</a></li>
-<li>Fix: Compatibility with textual 2.0 by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1033">#1033</a></li>
-<li>Fix: Use default trajectories dir according to ENV by <a href="https://github.com/vsee">@vsee</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1054">#1054</a></li>
-<li>Fix: fix Windows path error, replace Path with PurePosixPath or string by <a href="https://github.com/alwaysgoodtime">@alwaysgoodtime</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1052">#1052</a></li>
-<li>Fix: Ensure tools PATH takes precedence by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1058">#1058</a></li>
-<li>Fix: Ensure state exists by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1065">#1065</a></li>
-<li>Fix spelling of 'agent' in hello world by <a href="https://github.com/edspencer">@edspencer</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1077">#1077</a></li>
-<li>Fix: Inspector needs to handle new message format by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1094">#1094</a></li>
-<li>Fix: SWEBenchInstances with path and no subset initiated as other instance type by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1096">#1096</a></li>
-<li>Fix: Token limit exceeded for PR body issue by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1098">#1098</a></li>
-<li>Fix: Work around litellm claude 3.7 tokens to 128k by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1106">#1106</a></li>
-<li>Fix(repo): Ensure absolute path for copy repo by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1116">#1116</a></li>
-<li>Fix execution time timeouts by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1118">#1118</a></li>
-<li>Fix: Hierarchical merge of multiple configs by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1123">#1123</a></li>
-<li>fix message type missing by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1127">#1127</a></li>
-<li>Fix: Conditional for warning about empty template by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1137">#1137</a></li>
+<li>Fix: Setting max_input_tokens to 0 by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/999">#999</a></li>
+<li>Fix: Explicitly set log file encoding by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1013">#1013</a></li>
+<li>Fix: Ensure pydantic-settings env prefix set by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1018">#1018</a></li>
+<li>Fix: run batch processing with modal by <a href="https://github.com/vsee">@vsee</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1023">#1023</a></li>
+<li>Fix: Catch exit forfeit by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1024">#1024</a></li>
+<li>Fix: Use 'latest' image tag for SWE-Bench images by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1029">#1029</a></li>
+<li>Fix: Show tenacity retry reasons by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1032">#1032</a></li>
+<li>Fix: Compatibility with textual 2.0 by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1033">#1033</a></li>
+<li>Fix: Use default trajectories dir according to ENV by <a href="https://github.com/vsee">@vsee</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1054">#1054</a></li>
+<li>Fix: fix Windows path error, replace Path with PurePosixPath or string by <a href="https://github.com/alwaysgoodtime">@alwaysgoodtime</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1052">#1052</a></li>
+<li>Fix: Ensure tools PATH takes precedence by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1058">#1058</a></li>
+<li>Fix: Ensure state exists by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1065">#1065</a></li>
+<li>Fix spelling of 'agent' in hello world by <a href="https://github.com/edspencer">@edspencer</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1077">#1077</a></li>
+<li>Fix: Inspector needs to handle new message format by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1094">#1094</a></li>
+<li>Fix: SWEBenchInstances with path and no subset initiated as other instance type by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1096">#1096</a></li>
+<li>Fix: Token limit exceeded for PR body issue by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1098">#1098</a></li>
+<li>Fix: Work around litellm claude 3.7 tokens to 128k by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1106">#1106</a></li>
+<li>Fix(repo): Ensure absolute path for copy repo by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1116">#1116</a></li>
+<li>Fix execution time timeouts by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1118">#1118</a></li>
+<li>Fix: Hierarchical merge of multiple configs by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1123">#1123</a></li>
+<li>fix message type missing by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1127">#1127</a></li>
+<li>Fix: Conditional for warning about empty template by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/1137">#1137</a></li>
 </ul>
 <h3 id="new-contributors">New Contributors</h3>
 <ul>
-<li><a href="https://github.com/vsee">@vsee</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1023">#1023</a></li>
-<li><a href="https://github.com/FRAOTIAC">@FRAOTIAC</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1043">#1043</a></li>
-<li><a href="https://github.com/jpaodev">@jpaodev</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1050">#1050</a></li>
-<li><a href="https://github.com/alwaysgoodtime">@alwaysgoodtime</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1052">#1052</a></li>
-<li><a href="https://github.com/alexgshaw">@alexgshaw</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1056">#1056</a></li>
-<li><a href="https://github.com/talorabr">@talorabr</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1026">#1026</a></li>
-<li><a href="https://github.com/katia">@katia</a>-sentry made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1070">#1070</a></li>
-<li><a href="https://github.com/edspencer">@edspencer</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1077">#1077</a></li>
-<li><a href="https://github.com/kabirgh">@kabirgh</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/1090">#1090</a></li>
+<li><a href="https://github.com/vsee">@vsee</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/1023">#1023</a></li>
+<li><a href="https://github.com/FRAOTIAC">@FRAOTIAC</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/1043">#1043</a></li>
+<li><a href="https://github.com/jpaodev">@jpaodev</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/1050">#1050</a></li>
+<li><a href="https://github.com/alwaysgoodtime">@alwaysgoodtime</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/1052">#1052</a></li>
+<li><a href="https://github.com/alexgshaw">@alexgshaw</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/1056">#1056</a></li>
+<li><a href="https://github.com/talorabr">@talorabr</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/1026">#1026</a></li>
+<li><a href="https://github.com/katia">@katia</a>-sentry made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/1070">#1070</a></li>
+<li><a href="https://github.com/edspencer">@edspencer</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/1077">#1077</a></li>
+<li><a href="https://github.com/kabirgh">@kabirgh</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/1090">#1090</a></li>
 </ul>
 <p><strong>Full Changelog</strong>: <a href="https://github.com/shaoshao66/code-fixer/compare/v1.0.1...v1.1.0">https://github.com/shaoshao66/code-fixer/compare/v1.0.1...v1.1.0</a></p>
 <h2 id="code-fixer-101-2025-02-28">Code-Fixer 1.0.1 (2025-02-28)</h2>
 <p>This fixup release brings fixes mostly to the compatibility with local models. We have also significantly expanded the documentation in that aspect (<a href="https://github.com/shaoshao66/code-fixer/latest/installation/keys/">models &amp; keys documentation</a>).</p>
 <h3 id="changed">Changed</h3>
 <ul>
-<li>Change: Make anthropic_filemap the new default config by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/927">#927</a></li>
+<li>Change: Make anthropic_filemap the new default config by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/927">#927</a></li>
 </ul>
 <h3 id="added_1">Added</h3>
 <ul>
-<li>Enh: Set timeout for post_startup_commands by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/973">#973</a></li>
-<li>Enh: Allow to override max_input_tokens for local models by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/992">#992</a></li>
+<li>Enh: Set timeout for post_startup_commands by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/973">#973</a></li>
+<li>Enh: Allow to override max_input_tokens for local models by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/992">#992</a></li>
 </ul>
 <h3 id="fixes">Fixes</h3>
 <ul>
-<li>Fix: Handling local models cost lookup issues by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/937">#937</a></li>
-<li>Fix: Requires-python &gt;= 3.11 by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/940">#940</a></li>
-<li>traj inspector viewport reset by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/946">#946</a></li>
-<li>Fix: Reset viewport when next/prev step/traj by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/948">#948</a></li>
-<li>Fix: Disable highlighting of model outputs by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/949">#949</a></li>
-<li>Fix: Create PRs by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/954">#954</a></li>
-<li>Fix: Add <strong>init</strong>,py to agent/hooks by <a href="https://github.com/RNabel">@RNabel</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/961">#961</a></li>
-<li>Fix: Pin textual to version 1.0.0 by <a href="https://github.com/RNabel">@RNabel</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/960">#960</a></li>
-<li>Fix: OpenAI API: Don't pass None tool_calls to the OpenAI API by <a href="https://github.com/RNabel">@RNabel</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/967">#967</a></li>
-<li>Fix: Forces platform to be linux/amd64 for swe-bench batch runs by <a href="https://github.com/carlosejimenez">@carlosejimenez</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/942">#942</a></li>
-<li>Fix "TypeError: Cannot read properties of null (reading 'replace')" in Trajectory viewer by <a href="https://github.com/0xba1a">@0xba1a</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/989">#989</a></li>
-<li>Fix: No retries if costs cannot be calculated by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/990">#990</a></li>
-<li>Fix: Race condition/size change during iteration by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/993">#993</a></li>
-<li>Fix: Handle total cost limit exceeded by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/994">#994</a></li>
+<li>Fix: Handling local models cost lookup issues by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/937">#937</a></li>
+<li>Fix: Requires-python &gt;= 3.11 by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/940">#940</a></li>
+<li>traj inspector viewport reset by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/946">#946</a></li>
+<li>Fix: Reset viewport when next/prev step/traj by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/948">#948</a></li>
+<li>Fix: Disable highlighting of model outputs by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/949">#949</a></li>
+<li>Fix: Create PRs by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/954">#954</a></li>
+<li>Fix: Add <strong>init</strong>,py to agent/hooks by <a href="https://github.com/RNabel">@RNabel</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/961">#961</a></li>
+<li>Fix: Pin textual to version 1.0.0 by <a href="https://github.com/RNabel">@RNabel</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/960">#960</a></li>
+<li>Fix: OpenAI API: Don't pass None tool_calls to the OpenAI API by <a href="https://github.com/RNabel">@RNabel</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/967">#967</a></li>
+<li>Fix: Forces platform to be linux/amd64 for swe-bench batch runs by <a href="https://github.com/carlosejimenez">@carlosejimenez</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/942">#942</a></li>
+<li>Fix "TypeError: Cannot read properties of null (reading 'replace')" in Trajectory viewer by <a href="https://github.com/0xba1a">@0xba1a</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/989">#989</a></li>
+<li>Fix: No retries if costs cannot be calculated by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/990">#990</a></li>
+<li>Fix: Race condition/size change during iteration by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/993">#993</a></li>
+<li>Fix: Handle total cost limit exceeded by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/994">#994</a></li>
 </ul>
 <h2 id="new-contributors_1">New Contributors</h2>
 <ul>
-<li><a href="https://github.com/RNabel">@RNabel</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/961">#961</a></li>
-<li><a href="https://github.com/dhruvji">@dhruvji</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/963">#963</a></li>
-<li><a href="https://github.com/0xba1a">@0xba1a</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/989">#989</a></li>
+<li><a href="https://github.com/RNabel">@RNabel</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/961">#961</a></li>
+<li><a href="https://github.com/dhruvji">@dhruvji</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/963">#963</a></li>
+<li><a href="https://github.com/0xba1a">@0xba1a</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/989">#989</a></li>
 </ul>
 <p><strong>Full Changelog</strong>: <a href="https://github.com/shaoshao66/code-fixer/compare/v1.0.0...v1.0.1">https://github.com/shaoshao66/code-fixer/compare/v1.0.0...v1.0.1</a></p>
 <h2 id="100-2025-02-13">1.0.0 (2025-02-13)</h2>
@@ -3714,8 +3714,8 @@ Using this training data, our LM Code-Fixer-LM-32b achieves open-weights SotA on
 You can read more about the changes in the <a href="../migration/">migration guide</a>.</p>
 <h3 id="added_2">Added</h3>
 <ul>
-<li>Fast, massively parallel code execution with <a href="https://github.com/code-fixer/SWE-ReX">SWE-ReX</a>.</li>
-<li>Run Code-Fixer locally but execute code in the cloud (using modal, AWS, or anything else that runs <a href="https://github.com/code-fixer/SWE-ReX">SWE-ReX</a>).</li>
+<li>Fast, massively parallel code execution with <a href="https://github.com/SWE-agent/SWE-ReX">SWE-ReX</a>.</li>
+<li>Run Code-Fixer locally but execute code in the cloud (using modal, AWS, or anything else that runs <a href="https://github.com/SWE-agent/SWE-ReX">SWE-ReX</a>).</li>
 <li>Configurable retry mechanisms: Try multiple agent configurations, models, parameters, etc., then choose the best one.</li>
 <li>Flexible tool definitions with <a href="../../config/tools/">tool bundles</a>.</li>
 <li>All language models supported using <code>litellm</code> (see <a href="../keys/">models</a>).</li>
@@ -3727,7 +3727,7 @@ You can read more about the changes in the <a href="../migration/">migration gui
 <h3 id="changed_1">Changed</h3>
 <ul>
 <li>The code base has been largely rewritten. Lots of things have moved and changed.</li>
-<li>The biggest change is that we now use <a href="https://github.com/code-fixer/SWE-ReX">SWE-ReX</a> for code execution. This allowed us to remove a lot of distracting code from the agent.</li>
+<li>The biggest change is that we now use <a href="https://github.com/SWE-agent/SWE-ReX">SWE-ReX</a> for code execution. This allowed us to remove a lot of distracting code from the agent.</li>
 <li>We now use <a href="https://docs.pydantic.dev/"><code>pydantic</code></a> for all configuration.</li>
 <li>Templates are now <a href="https://jinja.palletsprojects.com/"><code>jinja2</code></a> templates, which gives you more flexibility (but you'll have to update your templates)</li>
 <li>All models are now configured using <code>litellm</code> (see <a href="../keys/">models</a>).</li>
@@ -3735,62 +3735,62 @@ You can read more about the changes in the <a href="../migration/">migration gui
 <p>See the <a href="../migration/">migration guide</a> for more details.</p>
 <h3 id="new-contributors_2">New contributors</h3>
 <ul>
-<li><a href="https://github.com/manya706">@manya706</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/787">#787</a></li>
-<li><a href="https://github.com/Prathamesh010">@Prathamesh010</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/796">#796</a></li>
-<li><a href="https://github.com/magnimusprime">@magnimusprime</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/813">#813</a></li>
-<li><a href="https://github.com/dependabot">@dependabot</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/817">#817</a></li>
-<li><a href="https://github.com/Mefisto04">@Mefisto04</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/824">#824</a></li>
-<li><a href="https://github.com/acheshkov">@acheshkov</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/857">#857</a></li>
-<li><a href="https://github.com/yu-iskw">@yu-iskw</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/881">#881</a></li>
+<li><a href="https://github.com/manya706">@manya706</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/787">#787</a></li>
+<li><a href="https://github.com/Prathamesh010">@Prathamesh010</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/796">#796</a></li>
+<li><a href="https://github.com/magnimusprime">@magnimusprime</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/813">#813</a></li>
+<li><a href="https://github.com/dependabot">@dependabot</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/817">#817</a></li>
+<li><a href="https://github.com/Mefisto04">@Mefisto04</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/824">#824</a></li>
+<li><a href="https://github.com/acheshkov">@acheshkov</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/857">#857</a></li>
+<li><a href="https://github.com/yu-iskw">@yu-iskw</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/881">#881</a></li>
 </ul>
 <h2 id="070-2024-09-23">0.7.0 (2024-09-23)</h2>
 <h3 id="added_3">Added</h3>
 <p>The main new feature is the <strong>EnIGMA mode</strong>, which included additions like support for Interactive Agent Tools
 and Summarizers.</p>
 <ul>
-<li>Add filemap command in the spirit of repomap by <a href="https://github.com/samuela">@samuela</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/619">#619</a></li>
-<li>Create config to run human eval style challenges by <a href="https://github.com/ofirpress">@ofirpress</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/658">#658</a></li>
-<li>Add claude 3.5 sonnet to models by <a href="https://github.com/carlosejimenez">@carlosejimenez</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/601">#601</a></li>
-<li>Enh: Warn if scrolling &gt;= 3 times by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/626">#626</a></li>
-<li>feat: support deepseek-coder LLM by <a href="https://github.com/jcraftsman">@jcraftsman</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/638">#638</a></li>
-<li>Enh: Make timeout for agent commands configurable by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/674">#674</a></li>
-<li>Add support for new gpt-4o-mini model by <a href="https://github.com/ivan4722">@ivan4722</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/693">#693</a></li>
-<li>Groq Models Integration by <a href="https://github.com/MohammedNagdy">@MohammedNagdy</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/721">#721</a></li>
-<li>Make log level configurable; add TRACE level by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/612">#612</a></li>
+<li>Add filemap command in the spirit of repomap by <a href="https://github.com/samuela">@samuela</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/619">#619</a></li>
+<li>Create config to run human eval style challenges by <a href="https://github.com/ofirpress">@ofirpress</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/658">#658</a></li>
+<li>Add claude 3.5 sonnet to models by <a href="https://github.com/carlosejimenez">@carlosejimenez</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/601">#601</a></li>
+<li>Enh: Warn if scrolling &gt;= 3 times by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/626">#626</a></li>
+<li>feat: support deepseek-coder LLM by <a href="https://github.com/jcraftsman">@jcraftsman</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/638">#638</a></li>
+<li>Enh: Make timeout for agent commands configurable by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/674">#674</a></li>
+<li>Add support for new gpt-4o-mini model by <a href="https://github.com/ivan4722">@ivan4722</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/693">#693</a></li>
+<li>Groq Models Integration by <a href="https://github.com/MohammedNagdy">@MohammedNagdy</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/721">#721</a></li>
+<li>Make log level configurable; add TRACE level by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/612">#612</a></li>
 </ul>
 <h3 id="fixes_1">Fixes</h3>
 <ul>
-<li>Compatibility with SWE-bench 2.0 by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/671">#671</a></li>
-<li>ensure variables work in special command docstring by <a href="https://github.com/forresty">@forresty</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/628">#628</a></li>
-<li>Important fix: Catch CostLimitExceeded in retry because of format/block by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/682">#682</a></li>
-<li>Fix: Handle empty traj in should_skip by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/616">#616</a></li>
-<li>Fix for end-marker communicate: Exit status always 0/invalid by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/644">#644</a></li>
-<li>Fix: Insufficient quoting of git commit message by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/646">#646</a></li>
-<li>Fix nonsensical trajectory formatting for PRs by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/647">#647</a></li>
-<li>Fix: sweunexpected keyword 'python_version' by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/692">#692</a></li>
-<li>Fix: Use LONG_TIMEOUT for pre_install commands by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/695">#695</a></li>
-<li>Fix: UnboundLocalError when catching decoding issue by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/709">#709</a></li>
-<li>Also create empty patch files for completeness by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/725">#725</a></li>
-<li>Fix: Raise ContextWindowExceeded instead of exit_cost by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/727">#727</a></li>
-<li>Fix: Deal with non-utf8 encoded bytes in comm by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/731">#731</a></li>
-<li>Fix: Handle spaces in repo names by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/734">#734</a></li>
-<li>Fix: Ensure utils is part of package by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/742">#742</a></li>
-<li>Fix: Submitting ' ' in human mode crashes container by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/749">#749</a></li>
-<li>Fix: Block su as command by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/752">#752</a></li>
-<li>Fix: CODE_FIXER_MODEL_MAX_RETRIES needs casting by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/757">#757</a></li>
+<li>Compatibility with SWE-bench 2.0 by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/671">#671</a></li>
+<li>ensure variables work in special command docstring by <a href="https://github.com/forresty">@forresty</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/628">#628</a></li>
+<li>Important fix: Catch CostLimitExceeded in retry because of format/block by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/682">#682</a></li>
+<li>Fix: Handle empty traj in should_skip by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/616">#616</a></li>
+<li>Fix for end-marker communicate: Exit status always 0/invalid by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/644">#644</a></li>
+<li>Fix: Insufficient quoting of git commit message by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/646">#646</a></li>
+<li>Fix nonsensical trajectory formatting for PRs by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/647">#647</a></li>
+<li>Fix: sweunexpected keyword 'python_version' by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/692">#692</a></li>
+<li>Fix: Use LONG_TIMEOUT for pre_install commands by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/695">#695</a></li>
+<li>Fix: UnboundLocalError when catching decoding issue by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/709">#709</a></li>
+<li>Also create empty patch files for completeness by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/725">#725</a></li>
+<li>Fix: Raise ContextWindowExceeded instead of exit_cost by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/727">#727</a></li>
+<li>Fix: Deal with non-utf8 encoded bytes in comm by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/731">#731</a></li>
+<li>Fix: Handle spaces in repo names by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/734">#734</a></li>
+<li>Fix: Ensure utils is part of package by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/742">#742</a></li>
+<li>Fix: Submitting ' ' in human mode crashes container by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/749">#749</a></li>
+<li>Fix: Block su as command by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/752">#752</a></li>
+<li>Fix: CODE_FIXER_MODEL_MAX_RETRIES needs casting by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/757">#757</a></li>
 </ul>
 <h3 id="new-contributors_3">New Contributors</h3>
 <p>🎉 <strong><a href="https://github.com/talorabr">@talorabr</a>, <a href="https://github.com/udiboy1209">@udiboy1209</a>, <a href="https://github.com/haoranxi">@haoranxi</a>, <a href="https://github.com/NickNameInvalid">@NickNameInvalid</a>, <a href="https://github.com/rollingcoconut">@rollingcoconut</a> joined the team to build EnIGMA</strong> 🎉</p>
 <ul>
-<li><a href="https://github.com/samefarrar">@samefarrar</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/606">#606</a></li>
-<li><a href="https://github.com/hubstrauss">@hubstrauss</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/625">#625</a></li>
-<li><a href="https://github.com/samuela">@samuela</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/619">#619</a></li>
-<li><a href="https://github.com/forresty">@forresty</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/628">#628</a></li>
-<li><a href="https://github.com/jcraftsman">@jcraftsman</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/638">#638</a></li>
-<li><a href="https://github.com/ivan4722">@ivan4722</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/693">#693</a></li>
-<li><a href="https://github.com/JoshuaPurtell">@JoshuaPurtell</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/703">#703</a></li>
-<li><a href="https://github.com/MohammedNagdy">@MohammedNagdy</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/721">#721</a></li>
-<li><a href="https://github.com/pdemro">@pdemro</a> made their first contribution in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/729">#729</a></li>
+<li><a href="https://github.com/samefarrar">@samefarrar</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/606">#606</a></li>
+<li><a href="https://github.com/hubstrauss">@hubstrauss</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/625">#625</a></li>
+<li><a href="https://github.com/samuela">@samuela</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/619">#619</a></li>
+<li><a href="https://github.com/forresty">@forresty</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/628">#628</a></li>
+<li><a href="https://github.com/jcraftsman">@jcraftsman</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/638">#638</a></li>
+<li><a href="https://github.com/ivan4722">@ivan4722</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/693">#693</a></li>
+<li><a href="https://github.com/JoshuaPurtell">@JoshuaPurtell</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/703">#703</a></li>
+<li><a href="https://github.com/MohammedNagdy">@MohammedNagdy</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/721">#721</a></li>
+<li><a href="https://github.com/pdemro">@pdemro</a> made their first contribution in <a href="https://github.com/SWE-agent/SWE-agent/pull/729">#729</a></li>
 </ul>
 <h2 id="061-2024-06-20">0.6.1 (2024-06-20)</h2>
 <p><a href="https://github.com/shaoshao66/code-fixer/compare/v0.6.0...v0.6.1">All new commits</a></p>
@@ -3798,49 +3798,49 @@ and Summarizers.</p>
 We also solve a bug where existing linter errors in a file left Code-Fixer unable to edit (because of our lint-retry-loop).</p>
 <h3 id="breaking-changes_1">Breaking changes</h3>
 <ul>
-<li>Change: sparse clone method is now correctly called "shallow" by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/591">#591</a></li>
+<li>Change: sparse clone method is now correctly called "shallow" by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/591">#591</a></li>
 </ul>
 <h3 id="improved">Improved</h3>
 <ul>
-<li>Enh: Show commands when encountering timeout error by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/582">#582</a></li>
-<li>Enh: Configuration option to show time in log by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/583">#583</a></li>
-<li>Enh: Allow to configure LONG_TIMEOUT for SWEEnv by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/584">#584</a></li>
-<li>Enh: Always write log to traj directory by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/588">#588</a></li>
+<li>Enh: Show commands when encountering timeout error by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/582">#582</a></li>
+<li>Enh: Configuration option to show time in log by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/583">#583</a></li>
+<li>Enh: Allow to configure LONG_TIMEOUT for SWEEnv by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/584">#584</a></li>
+<li>Enh: Always write log to traj directory by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/588">#588</a></li>
 </ul>
 <h3 id="fixed_1">Fixed</h3>
 <ul>
-<li>fix <code>docker.errors.NotFound</code> by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/587">#587</a></li>
-<li>Fix: Revert to full clone method when needed by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/589">#589</a></li>
-<li>Fix: Refresh container_obj before querying status by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/590">#590</a></li>
-<li>Fixed #571 - show message that model arg is ignored in case of using Azure OpenAI by <a href="https://github.com/jank">@jank</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/592">#592</a></li>
-<li>Fix: Linting blocks for existing lint errors by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/593">#593</a></li>
-<li>Fix: Process done marker not found in read with timeout by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/596">#596</a></li>
+<li>fix <code>docker.errors.NotFound</code> by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/587">#587</a></li>
+<li>Fix: Revert to full clone method when needed by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/589">#589</a></li>
+<li>Fix: Refresh container_obj before querying status by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/590">#590</a></li>
+<li>Fixed #571 - show message that model arg is ignored in case of using Azure OpenAI by <a href="https://github.com/jank">@jank</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/592">#592</a></li>
+<li>Fix: Linting blocks for existing lint errors by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/593">#593</a></li>
+<li>Fix: Process done marker not found in read with timeout by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/596">#596</a></li>
 </ul>
 <h2 id="060-2024-06-05">0.6.0 (2024-06-05)</h2>
 <p><a href="https://github.com/shaoshao66/code-fixer/compare/v0.5.0...v0.6.0">All new commits</a></p>
 <p><strong>We sped up Code-Fixer by 2x</strong> (timed with GPT4o). This is mostly due to faster communication with the running processes inside of the Docker container and other container setup &amp; installation related improvements. Here are a few relevant PRs:</p>
 <ul>
-<li>Switch to fast communicate and shallow clone by default by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/530">#530</a></li>
-<li>Change: Only wait 1s for docker to start by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/541">#541</a></li>
-<li>Feat: experimental shallow cloning by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/498">#498</a></li>
-<li>Enh: Start from clone of python conda environment for speedup by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/548">#548</a></li>
-<li>Enh: Use uv for editable install by default by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/547">#547</a></li>
+<li>Switch to fast communicate and shallow clone by default by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/530">#530</a></li>
+<li>Change: Only wait 1s for docker to start by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/541">#541</a></li>
+<li>Feat: experimental shallow cloning by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/498">#498</a></li>
+<li>Enh: Start from clone of python conda environment for speedup by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/548">#548</a></li>
+<li>Enh: Use uv for editable install by default by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/547">#547</a></li>
 </ul>
 <h3 id="improved_1">Improved</h3>
 <ul>
-<li>Improve scrolling behavior in web UI by <a href="https://github.com/anishfish2">@anishfish2</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/420">#420</a></li>
-<li>Web UI: Render Markdown in agent feed messages. by <a href="https://github.com/kwight">@kwight</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/486">#486</a></li>
-<li>Enh: Remove redundant 'saved traj to X' messages by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/528">#528</a></li>
-<li>Allow to disable config dump to log by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/537">#537</a></li>
-<li>Resolve relative paths to demonstrations and commands by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/444">#444</a></li>
+<li>Improve scrolling behavior in web UI by <a href="https://github.com/anishfish2">@anishfish2</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/420">#420</a></li>
+<li>Web UI: Render Markdown in agent feed messages. by <a href="https://github.com/kwight">@kwight</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/486">#486</a></li>
+<li>Enh: Remove redundant 'saved traj to X' messages by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/528">#528</a></li>
+<li>Allow to disable config dump to log by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/537">#537</a></li>
+<li>Resolve relative paths to demonstrations and commands by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/444">#444</a></li>
 </ul>
 <h3 id="fixed_2">Fixed</h3>
 <ul>
-<li>Web UI: Remove -n option to wait by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/487">#487</a></li>
-<li>Web UI: Kill the Flask server on exit. by <a href="https://github.com/kwight">@kwight</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/479">#479</a></li>
-<li>Web UI: Avoid proxy errors on MacOS by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/506">#506</a></li>
-<li>Ensure container_name is reset for non-persistent containers by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/463">#463</a></li>
-<li>Fix: Do not allow persistent container with cache task imgs by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/551">#551</a></li>
+<li>Web UI: Remove -n option to wait by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/487">#487</a></li>
+<li>Web UI: Kill the Flask server on exit. by <a href="https://github.com/kwight">@kwight</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/479">#479</a></li>
+<li>Web UI: Avoid proxy errors on MacOS by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/506">#506</a></li>
+<li>Ensure container_name is reset for non-persistent containers by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/463">#463</a></li>
+<li>Fix: Do not allow persistent container with cache task imgs by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/551">#551</a></li>
 </ul>
 <h2 id="050-2024-05-28">0.5.0 (2024-05-28)</h2>
 <p><a href="https://github.com/shaoshao66/code-fixer/compare/v0.4.0...v0.5.0">All new commits</a></p>
@@ -3849,32 +3849,32 @@ We also solve a bug where existing linter errors in a file left Code-Fixer unabl
 <h3 id="breaking-changes_2">Breaking changes</h3>
 <ul>
 <li>We have reformatted our codebase. If you create a PR based on a previous commit, make sure you install our <code>pre-commit</code> hook to avoid merge-conflicts because of formatting. See <a href="https://github.com/shaoshao66/code-fixer/latest/dev/formatting_conflicts/">our docs</a> for more information.</li>
-<li>Remove direct imports in <code>__init__.py</code> (you can no longer <code>from codefixer import Agent</code> by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/436">#436</a></li>
+<li>Remove direct imports in <code>__init__.py</code> (you can no longer <code>from codefixer import Agent</code> by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/436">#436</a></li>
 </ul>
 <h3 id="added_4">Added</h3>
 <ul>
 <li>Running the web UI is now supported when running Code-Fixer completely in docker</li>
-<li>Speed up evaluation by caching task environments as docker images by <a href="https://github.com/ollmer">@ollmer</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/317">#317</a></li>
+<li>Speed up evaluation by caching task environments as docker images by <a href="https://github.com/ollmer">@ollmer</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/317">#317</a></li>
 </ul>
 <h3 id="improved_2">Improved</h3>
 <ul>
-<li>Add gpt-4o model by <a href="https://github.com/raymyers">@raymyers</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/344">#344</a></li>
-<li>Web: Allow to specify commit hash by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/358">#358</a></li>
-<li>Add default environment_setup config by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/351">#351</a></li>
-<li>Enh: Suppress openai logging; improve formatting of stats by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/416">#416</a></li>
-<li>Remove signal dependency by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/428">#428</a></li>
-<li>Do not use select if running on Windows by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/429">#429</a></li>
-<li>Use custom Config class to support env and keys.cfg (this allows passing keys as environment variables) by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/430">#430</a></li>
+<li>Add gpt-4o model by <a href="https://github.com/raymyers">@raymyers</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/344">#344</a></li>
+<li>Web: Allow to specify commit hash by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/358">#358</a></li>
+<li>Add default environment_setup config by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/351">#351</a></li>
+<li>Enh: Suppress openai logging; improve formatting of stats by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/416">#416</a></li>
+<li>Remove signal dependency by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/428">#428</a></li>
+<li>Do not use select if running on Windows by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/429">#429</a></li>
+<li>Use custom Config class to support env and keys.cfg (this allows passing keys as environment variables) by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/430">#430</a></li>
 </ul>
 <h3 id="fixed_3">Fixed</h3>
 <ul>
-<li>Web: Fix script_path input by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/334">#334</a></li>
-<li>Fix: Don't print patch msg for exit_cost patch by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/343">#343</a></li>
-<li>Fix: Do not request job control in bash by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/345">#345</a></li>
-<li>Fix: --base_commit not used for gh urls by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/346">#346</a></li>
-<li>Fix: Separate data path/traj dir cause exception by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/348">#348</a></li>
-<li>Add docker-py lower bound by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/406">#406</a></li>
-<li>Fix: IndexError when replaying incomplete trajectories by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/410">#410</a></li>
+<li>Web: Fix script_path input by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/334">#334</a></li>
+<li>Fix: Don't print patch msg for exit_cost patch by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/343">#343</a></li>
+<li>Fix: Do not request job control in bash by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/345">#345</a></li>
+<li>Fix: --base_commit not used for gh urls by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/346">#346</a></li>
+<li>Fix: Separate data path/traj dir cause exception by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/348">#348</a></li>
+<li>Add docker-py lower bound by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/406">#406</a></li>
+<li>Fix: IndexError when replaying incomplete trajectories by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/410">#410</a></li>
 </ul>
 <h2 id="040-2024-05-09">0.4.0 (2024-05-09)</h2>
 <p><a href="https://github.com/shaoshao66/code-fixer/compare/v0.3.0...v0.4.0">All new commits</a></p>
@@ -3884,36 +3884,36 @@ We also solve a bug where existing linter errors in a file left Code-Fixer unabl
 <h3 id="added_6">Added</h3>
 <ul>
 <li>Run Code-Fixer in the cloud using GitHub Codespaces</li>
-<li>Add GPT4-turbo model by <a href="https://github.com/zgrannan">@zgrannan</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/252">#252</a></li>
-<li>feat: Amazon Bedrock support (Claude models) by <a href="https://github.com/JGalego">@JGalego</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/207">#207</a></li>
+<li>Add GPT4-turbo model by <a href="https://github.com/zgrannan">@zgrannan</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/252">#252</a></li>
+<li>feat: Amazon Bedrock support (Claude models) by <a href="https://github.com/JGalego">@JGalego</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/207">#207</a></li>
 </ul>
 <h3 id="fixed_4">Fixed</h3>
 <ul>
-<li>Better error handling for --open_pr by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/239">#239</a></li>
-<li>Fixed a potential error by <a href="https://github.com/DanjieTang">@DanjieTang</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/242">#242</a></li>
-<li>fix: TARGETARCH not set on some OS/docker setups by <a href="https://github.com/mspronesti">@mspronesti</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/249">#249</a></li>
-<li>Pass Python version to get_environment_yml by <a href="https://github.com/waterson">@waterson</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/271">#271</a></li>
-<li>Fix Together model validation error by <a href="https://github.com/mikanfactory">@mikanfactory</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/236">#236</a></li>
-<li>Doc: Avoid invalid github token by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/292">#292</a></li>
+<li>Better error handling for --open_pr by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/239">#239</a></li>
+<li>Fixed a potential error by <a href="https://github.com/DanjieTang">@DanjieTang</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/242">#242</a></li>
+<li>fix: TARGETARCH not set on some OS/docker setups by <a href="https://github.com/mspronesti">@mspronesti</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/249">#249</a></li>
+<li>Pass Python version to get_environment_yml by <a href="https://github.com/waterson">@waterson</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/271">#271</a></li>
+<li>Fix Together model validation error by <a href="https://github.com/mikanfactory">@mikanfactory</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/236">#236</a></li>
+<li>Doc: Avoid invalid github token by <a href="https://github.com/klieret">@klieret</a> in <a href="https://github.com/SWE-agent/SWE-agent/pull/292">#292</a></li>
 </ul>
 <h2 id="020-2024-04-15">0.2.0 (2024-04-15)</h2>
 <p><a href="https://github.com/shaoshao66/code-fixer/compare/v0.1.2...v0.2.0">All new commits</a></p>
 <h3 id="added_7">Added</h3>
 <ul>
-<li>Allow to run on local repos (new flag: <code>--repo_path</code>) in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/193">#193</a></li>
-<li>Patch files are now saved separately to a patch directory in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/126">#126</a></li>
-<li>Allow to supply custom installation commands when running on gh issues or locally (<code>--environment_setup</code>) in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/153">#153</a></li>
-<li>Allow to specify openapi base url in <code>keys.cfg</code> in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/118">#118</a></li>
+<li>Allow to run on local repos (new flag: <code>--repo_path</code>) in <a href="https://github.com/SWE-agent/SWE-agent/pull/193">#193</a></li>
+<li>Patch files are now saved separately to a patch directory in <a href="https://github.com/SWE-agent/SWE-agent/pull/126">#126</a></li>
+<li>Allow to supply custom installation commands when running on gh issues or locally (<code>--environment_setup</code>) in <a href="https://github.com/SWE-agent/SWE-agent/pull/153">#153</a></li>
+<li>Allow to specify openapi base url in <code>keys.cfg</code> in <a href="https://github.com/SWE-agent/SWE-agent/pull/118">#118</a></li>
 </ul>
 <h3 id="improved_3">Improved</h3>
 <ul>
-<li>Improve error handling of docker issues in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/165">#165</a></li>
-<li>Make github token fully optional in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/189">#189</a></li>
+<li>Improve error handling of docker issues in <a href="https://github.com/SWE-agent/SWE-agent/pull/165">#165</a></li>
+<li>Make github token fully optional in <a href="https://github.com/SWE-agent/SWE-agent/pull/189">#189</a></li>
 </ul>
 <h3 id="fixed_5">Fixed</h3>
 <ul>
-<li>Fix opening PR from fork in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/229">#229</a></li>
-<li>Fix: Choosing TogetherAI models in <a href="https://github.com/princeton-nlp/Code-Fixer/pull/130">#130</a></li>
+<li>Fix opening PR from fork in <a href="https://github.com/SWE-agent/SWE-agent/pull/229">#229</a></li>
+<li>Fix: Choosing TogetherAI models in <a href="https://github.com/SWE-agent/SWE-agent/pull/130">#130</a></li>
 </ul>
 
 

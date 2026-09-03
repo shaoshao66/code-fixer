@@ -2696,8 +2696,8 @@
 <h1 id="code-fixer-100-migration-guide">Code-Fixer 1.0.0 migration guide</h1>
 <p>Welcome to Code-Fixer 1.0! So much new stuff! Here's a quick rundown of the cool new things you can do:</p>
 <ul>
-<li><img alt="✨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2728.svg" title=":sparkles:"> Fast, massively parallel code execution with <a href="https://github.com/code-fixer/SWE-ReX">SWE-ReX</a>.</li>
-<li><img alt="✨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2728.svg" title=":sparkles:"> Run Code-Fixer locally but execute code in the cloud (using modal, AWS, or anything else that runs <a href="https://github.com/code-fixer/SWE-ReX">SWE-ReX</a>).</li>
+<li><img alt="✨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2728.svg" title=":sparkles:"> Fast, massively parallel code execution with <a href="https://github.com/SWE-agent/SWE-ReX">SWE-ReX</a>.</li>
+<li><img alt="✨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2728.svg" title=":sparkles:"> Run Code-Fixer locally but execute code in the cloud (using modal, AWS, or anything else that runs <a href="https://github.com/SWE-agent/SWE-ReX">SWE-ReX</a>).</li>
 <li><img alt="✨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2728.svg" title=":sparkles:"> Configurable retry mechanisms: Try multiple agent configurations, models, parameters, etc., then choose the best one.</li>
 <li><img alt="✨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2728.svg" title=":sparkles:"> Flexible tool definitions with <a href="../../config/tools/">tool bundles</a>.</li>
 <li><img alt="✨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2728.svg" title=":sparkles:"> All language models supported using <code>litellm</code> (see <a href="../keys/">models</a>).</li>
@@ -2733,7 +2733,7 @@ Additionally, every <a href="../../config/tools/">tool bundle</a> can include a 
 <h2 id="code">Code</h2>
 <p>The codebase has been nearly rewritten from scratch and both more powerful and more flexible.</p>
 <ul>
-<li>The biggest change is <a href="https://github.com/code-fixer/SWE-ReX">SWE-ReX</a>, our new "backend" that handles all code execution.</li>
+<li>The biggest change is <a href="https://github.com/SWE-agent/SWE-ReX">SWE-ReX</a>, our new "backend" that handles all code execution.</li>
 <li>As a result of this, the <code>SWEEnv</code> class is basically gone and only is a small wrapper around a <code>swerex</code> runtime</li>
 <li>The <code>Agent</code> class also has gotten a lot simpler. It also delegates a lot of tool/execution logic to the new <code>Tools</code> class.</li>
 </ul>
