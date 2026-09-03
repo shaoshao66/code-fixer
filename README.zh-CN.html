@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Code-Fixer README (中文)</title>
+<style>
+  body { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; line-height: 1.7; color: #1f2328; font-family: -apple-system, "Segoe UI", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif; }
+  h1,h2,h3,h4 { color: #0b5394; border-bottom: 1px solid #e5e7eb; padding-bottom: .3em; margin-top: 1.6em; }
+  a { color: #0969da; text-decoration: none; } a:hover { text-decoration: underline; }
+  img { max-width: 100%; }
+  blockquote { border-left: 4px solid #d29922; background: #fff8e1; margin: 1em 0; padding: .3em 1em; color: #4a4a4a; }
+  code { background: #f0f1f3; padding: .15em .35em; border-radius: 4px; font-family: "Cascadia Code", Consolas, monospace; font-size: .9em; }
+  pre { background: #f6f8fa; padding: 1em; overflow: auto; border-radius: 6px; }
+  pre code { background: transparent; padding: 0; }
+  table { border-collapse: collapse; } th, td { border: 1px solid #d0d7de; padding: .4em .7em; }
+  details { margin: 1em 0; border: 1px solid #d0d7de; padding: .5em 1em; border-radius: 6px; }
+  summary { cursor: pointer; font-weight: 600; }
+  pre { line-height: 125%; }
+td.linenos .normal { color: #666666; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: #666666; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f0f0f0; }
+.highlight .c { color: #60A0B0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #F00 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666 } /* Operator */
+.highlight .ch { color: #60A0B0; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #60A0B0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .cpf { color: #60A0B0; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #60A0B0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60A0B0; background-color: #FFF0F0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.highlight .gr { color: #F00 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888 } /* Generic.Output */
+.highlight .gp { color: #C65D09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #04D } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40A070 } /* Literal.Number */
+.highlight .s { color: #4070A0 } /* Literal.String */
+.highlight .na { color: #4070A0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0E84B5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60ADD5 } /* Name.Constant */
+.highlight .nd { color: #555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #D55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287E } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0E84B5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #BB60D5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #BBB } /* Text.Whitespace */
+.highlight .mb { color: #40A070 } /* Literal.Number.Bin */
+.highlight .mf { color: #40A070 } /* Literal.Number.Float */
+.highlight .mh { color: #40A070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40A070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40A070 } /* Literal.Number.Oct */
+.highlight .sa { color: #4070A0 } /* Literal.String.Affix */
+.highlight .sb { color: #4070A0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070A0 } /* Literal.String.Char */
+.highlight .dl { color: #4070A0 } /* Literal.String.Delimiter */
+.highlight .sd { color: #4070A0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070A0 } /* Literal.String.Double */
+.highlight .se { color: #4070A0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070A0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70A0D0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #C65D09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070A0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #06287E } /* Name.Function.Magic */
+.highlight .vc { color: #BB60D5 } /* Name.Variable.Class */
+.highlight .vg { color: #BB60D5 } /* Name.Variable.Global */
+.highlight .vi { color: #BB60D5 } /* Name.Variable.Instance */
+.highlight .vm { color: #BB60D5 } /* Name.Variable.Magic */
+.highlight .il { color: #40A070 } /* Literal.Number.Integer.Long */
+</style>
+</head>
+<body>
+<p align="center">
+  <a href="https://github.com/shaoshao66/code-fixer/latest/">
+    <img src="assets/code-fixer-banner.png" alt="github.com/shaoshao66/code-fixer" style="height: 7em" />
+  </a>
+</p>
+<p align="center">
+<a href="https://github.com/shaoshao66/code-fixer/latest/"><img src="https://img.shields.io/badge/Docs-green?style=for-the-badge&logo=materialformkdocs&logoColor=white" alt="Docs"></a>
+<a href="https://swe-bench.slack.com"><img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" alt="Slack"></a>
+<a href="https://arxiv.org/abs/2405.15793"><img src="https://img.shields.io/badge/arxiv-2405.15793-red?style=for-the-badge&logo=arxiv&logoColor=white&labelColor=black" alt="arxiv 2405.15793"></a>
+</p>
+<p align="center">
+  <a href="https://github.com/SWE-agent/mini-swe-agent/">
+    <img src="assets/warning.png" alt="mini-swe-agent.com" style="height: 7em" />
+  </a>
+</p>
+<blockquote>
+<p>[!warning]
+我们目前的大部分开发精力都集中在 <a href="https://github.com/SWE-agent/mini-swe-agent/">mini-swe-agent</a> 上，它已经取代了 Code-Fixer。mini-swe-agent 在性能上与 Code-Fixer 相当，但实现要简单得多。
+有关两者差异的更多细节，请参见 <a href="https://mini-swe-agent.com/latest/faq/">FAQ</a>。
+我们的一般建议是：今后请优先使用 mini-swe-agent，而不是 Code-Fixer。</p>
+</blockquote>
+<p>Code-Fixer 让您所选择的语言模型（例如 GPT-4o 或 Claude Sonnet 4）能够自主地使用工具来<a href="https://github.com/shaoshao66/code-fixer/latest/usage/hello_world">修复真实 GitHub 仓库中的问题</a>、<a href="https://enigma-agent.com/">发现网络安全漏洞</a>，或者<a href="https://github.com/shaoshao66/code-fixer/latest/usage/coding_challenges">执行任何自定义任务</a>。</p>
+<ul>
+<li>✅ <strong>当前最先进水平</strong>：在开源项目中于 SWE-bench 上取得领先成绩</li>
+<li>✅ <strong>自由灵活且通用</strong>：赋予语言模型最大的自主权</li>
+<li>✅ <strong>可配置且文档完备</strong>：只需一个 <code>yaml</code> 文件即可控制</li>
+<li>✅ <strong>为研究而设计</strong>：简单且易于二次开发</li>
+</ul>
+<p>Code-Fixer 由普林斯顿大学和斯坦福大学的研究者构建与维护。</p>
+<h2>📣 新闻</h2>
+<ul>
+<li>7月24日：<a href="https://github.com/SWE-agent/mini-swe-agent">Mini-SWE-Agent</a> 仅用 100 行 Python 就在 SWE-bench verified 上达到了 65%！</li>
+<li>5月2日：<a href="https://github.com/SWE-bench/SWE-smith">Code-Fixer-LM-32b</a> 在 SWE-bench 上取得了开源权重的最先进水平（SoTA）</li>
+<li>2月28日：<a href="https://x.com/KLieret/status/1895487966409298067">Code-Fixer 1.0 + Claude 3.7 在 SWE-Bench full 上达到 SoTA</a></li>
+<li>2月25日：<a href="https://x.com/KLieret/status/1894408819670733158">Code-Fixer 1.0 + Claude 3.7 在 SWE-bench verified 上达到 SoTA</a></li>
+<li>2月13日：<a href="https://x.com/KLieret/status/1890048205448220849">发布 Code-Fixer 1.0：在 SWE-bench light 上达到 SoTA，并带来大量新特性</a></li>
+<li>12月7日：<a href="https://www.youtube.com/watch?v=fcr8WzeEXyk">Code-Fixer 与 SWE-bench 团队访谈</a></li>
+</ul>
+<h2>🚀 快速开始！</h2>
+<p>👉 在浏览器中试用 Code-Fixer：<a href="https://codespaces.new/shaoshao66/code-fixer"><img src="https://img.shields.io/badge/Open_in_GitHub_Codespaces-gray?logo=github" alt="Open in GitHub Codespaces" /></a> (<a href="https://github.com/shaoshao66/code-fixer/latest/installation/codespaces/">更多信息</a>)</p>
+<p>请阅读我们的<a href="https://github.com/shaoshao66/code-fixer">文档</a>以了解更多：</p>
+<ul>
+<li><a href="https://github.com/shaoshao66/code-fixer/latest/installation/source/">安装</a></li>
+<li><a href="https://github.com/shaoshao66/code-fixer/latest/usage/hello_world/">命令行 Hello world</a></li>
+<li><a href="https://github.com/shaoshao66/code-fixer/latest/usage/batch_mode/">在 SWE-bench 上进行基准测试</a></li>
+<li><a href="https://github.com/shaoshao66/code-fixer/latest/faq/">常见问题解答</a></li>
+</ul>
+<h2>Code-Fixer 用于进攻性网络安全（EnIGMA） <a name="enigma"></a></h2>
+<p><img src="https://github.com/user-attachments/assets/84599168-11a7-4776-8a49-33dbf0758bb2" height="80px"></img></p>
+<p><a href="https://enigma-agent.com">Code-Fixer: EnIGMA</a> 是一个用于解决进攻性网络安全（夺旗赛 CTF）挑战的模式。EnIGMA 在多个网络安全基准上取得了领先成绩（参见<a href="https://enigma-agent.com/#results">排行榜</a>）。在我们为 1.0 版本更新 EnIGMA 期间，请先使用 <a href="https://github.com/shaoshao66/code-fixer/tree/v0.7">Code-Fixer 0.7</a>。</p>
+<p>此外，您可能对我们的其他项目也感兴趣：</p>
+<div align="center">
+  <a href="https://github.com/SWE-agent/mini-SWE-agent"><img src="docs/assets/mini_logo_text_below.svg" alt="Mini-SWE-Agent" height="120px"></a>
+   &nbsp;&nbsp;
+  <a href="https://github.com/SWE-agent/SWE-ReX"><img src="docs/assets/swerex_logo_text_below.svg" alt="SWE-ReX" height="120px"></a>
+   &nbsp;&nbsp;
+  <a href="https://github.com/SWE-bench/SWE-bench"><img src="docs/assets/swebench_logo_text_below.svg" alt="SWE-bench" height="120px"></a>
+  &nbsp;&nbsp;
+  <!-- <a href="https://github.com/shaoshao66/code-fixer"><img src="docs/assets/codefixer_logo_text_below.svg" alt="Code-Fixer" height="120px"></a> -->
+  <a href="https://github.com/SWE-bench/SWE-smith"><img src="docs/assets/swesmith_logo_text_below.svg" alt="SWE-smith" height="120px"></a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/SWE-bench/sb-cli"><img src="docs/assets/sbcli_logo_text_below.svg" alt="sb-cli" height="120px"></a>
+</div>
+<h2>贡献 <a name="contributions"></a></h2>
+<p>如果您想为代码库做出贡献，我们欢迎<a href="https://github.com/shaoshao66/code-fixer/issues">提交 issue</a> 和 <a href="https://github.com/shaoshao66/code-fixer/pulls">Pull Request</a>！对于较大的代码改动，我们始终鼓励先在 issue 中进行讨论。</p>
+<h2>引用与联系方式 <a name="citation"></a></h2>
+<p>Code-Fixer 是始于普林斯顿大学的学术项目，作者包括 John Yang*、Carlos E. Jimenez*、Alexander Wettig、Kilian Lieret、Shunyu Yao、Karthik Narasimhan 和 Ofir Press。
+联系人：<a href="https://john-b-yang.github.io/">John Yang</a>、<a href="http://www.carlosejimenez.com/">Carlos E. Jimenez</a> 和 <a href="https://www.lieret.net/">Kilian Lieret</a>（邮箱：johnby@stanford.edu、carlosej@cs.princeton.edu、kl5675@princeton.edu）。</p>
+<p>如果您觉得这项工作有帮助，请考虑按以下方式引用：</p>
+<details>
+<summary> Code-Fixer 引用</summary>
+<pre><code class="language-bibtex"><div class="highlight"><pre><span></span><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">yang2024codefixer</span><span class="p">,</span>
+<span class="w">  </span><span class="na">title</span><span class="p">=</span><span class="s">{{SWE}-agent: Agent-Computer Interfaces Enable Automated Software Engineering}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">author</span><span class="p">=</span><span class="s">{John Yang and Carlos E Jimenez and Alexander Wettig and Kilian Lieret and Shunyu Yao and Karthik R Narasimhan and Ofir Press}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">booktitle</span><span class="p">=</span><span class="s">{The Thirty-eighth Annual Conference on Neural Information Processing Systems}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">year</span><span class="p">=</span><span class="s">{2024}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2405.15793}</span>
+<span class="p">}</span>
+</pre></div>
+</code></pre>
+</details>
+<p>如果您使用了 Code-Fixer 中的摘要器（summarizer）、交互式命令或进攻性网络安全功能，还请考虑引用：</p>
+<details>
+<summary>EnIGMA 引用</summary>
+<pre><code class="language-bibtex"><div class="highlight"><pre><span></span><span class="nc">@misc</span><span class="p">{</span><span class="nl">abramovich2024enigmaenhancedinteractivegenerative</span><span class="p">,</span>
+<span class="w">      </span><span class="na">title</span><span class="p">=</span><span class="s">{EnIGMA: Enhanced Interactive Generative Model Agent for CTF Challenges}</span><span class="p">,</span>
+<span class="w">      </span><span class="na">author</span><span class="p">=</span><span class="s">{Talor Abramovich and Meet Udeshi and Minghao Shao and Kilian Lieret and Haoran Xi and Kimberly Milner and Sofija Jancheska and John Yang and Carlos E. Jimenez and Farshad Khorrami and Prashanth Krishnamurthy and Brendan Dolan-Gavitt and Muhammad Shafique and Karthik Narasimhan and Ramesh Karri and Ofir Press}</span><span class="p">,</span>
+<span class="w">      </span><span class="na">year</span><span class="p">=</span><span class="s">{2024}</span><span class="p">,</span>
+<span class="w">      </span><span class="na">eprint</span><span class="p">=</span><span class="s">{2409.16165}</span><span class="p">,</span>
+<span class="w">      </span><span class="na">archivePrefix</span><span class="p">=</span><span class="s">{arXiv}</span><span class="p">,</span>
+<span class="w">      </span><span class="na">primaryClass</span><span class="p">=</span><span class="s">{cs.AI}</span><span class="p">,</span>
+<span class="w">      </span><span class="na">url</span><span class="p">=</span><span class="s">{https://arxiv.org/abs/2409.16165}</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</code></pre>
+</details>
+<h2>🪪 许可证 <a name="license"></a></h2>
+<p>MIT。请查看 <code>LICENSE</code>。</p>
+<div align="center">
+<p><a href="https://github.com/shaoshao66/code-fixer/actions/workflows/pytest.yaml"><img src="https://github.com/shaoshao66/code-fixer/actions/workflows/pytest.yaml/badge.svg" alt="Pytest" /></a>
+<a href="https://github.com/shaoshao66/code-fixer/actions/workflows/build-docs.yaml"><img src="https://github.com/shaoshao66/code-fixer/actions/workflows/build-docs.yaml/badge.svg" alt="build-docs" /></a>
+<a href="https://codecov.io/gh/shaoshao66/code-fixer"><img src="https://codecov.io/gh/shaoshao66/code-fixer/graph/badge.svg?token=18XAVDK365" alt="codecov" /></a>
+<a href="https://results.pre-commit.ci/latest/github/shaoshao66/code-fixer/main"><img src="https://results.pre-commit.ci/badge/github/shaoshao66/code-fixer/main.svg" alt="pre-commit.ci status" /></a>
+<a href="https://github.com/shaoshao66/code-fixer/actions/workflows/check-links-periodic.yaml"><img src="https://github.com/shaoshao66/code-fixer/actions/workflows/check-links-periodic.yaml/badge.svg" alt="Markdown links" /></a></p>
+</div>
+</body>
+</html>

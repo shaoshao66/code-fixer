@@ -1,0 +1,5 @@
+main() {
+    echo "###CODE-FIXER-EXIT-FORFEIT###"
+}
+
+main "$@"
